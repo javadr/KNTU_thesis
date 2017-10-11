@@ -88,7 +88,13 @@
 \ProvidesClass{KNTU_thesis}
               [08/04/2012 v0.4
  Persian thesis document class in XeLaTeX for Khaje Nasireddin Toosi University of Technology projects/theses/dissertations]
+\newif\if@bscthesis
+\newif\if@mscthesis
+\newif\if@phdthesis
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
+\DeclareOption{bsc}{\@bscthesistrue}
+\DeclareOption{msc}{\@mscthesistrue}
+\DeclareOption{phd}{\@phdthesistrue}
 \ProcessOptions
 \LoadClass[a4paper,11pt]{book}
 %%%%%%%%%  Packages  %%%%%%%%%%%%%%%%%
@@ -223,16 +229,6 @@
 \def\latinkeywords#1{\gdef\@latinkeywords{#1}}
 \def\latinuniversity#1{\gdef\@latinuniversity{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newif\if@bscthesis
-\@bscthesisfalse
-\DeclareOption{bsc}{\@bscthesistrue}
-\newif\if@mscthesis
-\@mscthesisfalse
-\DeclareOption{msc}{\@mscthesistrue}
-\newif\if@phdthesis
-\@mscthesisfalse
-\DeclareOption{phd}{\@phdthesistrue}
-\ProcessOptions
 \def\Thesis{ \if@phdthesis
 رساله
  \else
