@@ -152,7 +152,7 @@
 \if@bidi@csundef{@bidi@removefromreset}{}{%
 \@bidi@removefromreset{footnote}{chapter}%
 }
-\settextfont[Scale=1.5,BoldFont={IRlotus}]{IRLotus}
+\settextfont[Language=Default,Scale=1.5,BoldFont={IRlotus}]{IRLotus}
 %\setlatintextfont[Scale=1.0]{Times New Roman}
 \paragraphfootnotes
 \setlength{\footmarkwidth}{0pt}
@@ -162,8 +162,8 @@
 \setdigitfont[Scale=1.1]{Yas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
-\defpersianfont\nastaliq[Scale=2.5]{IranNastaliq}
-\defpersianfont\chapternumber[Scale=1.5,BoldFont={IRlotus}]{IRLotus}
+\defpersianfont\nastaliq[Language=Default,Scale=2.5]{IranNastaliq}[AutoFakeBold]
+\defpersianfont\chapternumber[Language=Default,Scale=1.5,BoldFont={IRlotus}]{IRLotus}
 }
 \graphicspath{ {Images/} }
 
@@ -771,14 +771,13 @@ $\mathbf{\Gr@de}$
 % تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
 \theoremstyle{definition}
 \newtheorem{definition}{تعریف}[section]
-\theoremstyle{theorem}
+\newtheorem{example}[definition]{مثال}
+\theoremstyle{plain}
 \newtheorem{theorem}[definition]{قضیه}
 \newtheorem{lemma}[definition]{لم}
 \newtheorem{proposition}[definition]{گزاره}
 \newtheorem{corollary}[definition]{نتیجه}
 \newtheorem{remark}[definition]{ملاحظه}
-\theoremstyle{definition}
-\newtheorem{example}[definition]{مثال}
 \def\@part[#1]#2{%
 \ifnum \c@secnumdepth >-2\relax
 \refstepcounter{part}%
@@ -875,10 +874,10 @@ $\mathbf{\Gr@de}$
 \newcommand{\ف}{\index} 
 \newcommand{\فف}[1]{\index{\lr{#1}}} 
 \newcommand{\LineStretch}[1]{\renewcommand{\baselinestretch}{#1}	
-\settextfont[Scale=1.4,BoldFont={IRlotus}]{IRLotus}
+\settextfont[Language=Default,Scale=1.4,BoldFont={IRlotus}]{IRLotus}
 } 
 	
-
+\setlength{\headheight}{16pt}
 	
 	
 
