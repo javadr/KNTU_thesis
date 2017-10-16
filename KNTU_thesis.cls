@@ -1,9 +1,13 @@
 %%%
 %%%  This is file `KNTU_thesis.cls',
-%%%  Version 1.68  modified
+%%%  Version 1.70  modified
 %%%  The original file was `Tabriz_thesis.cls' by Vahid Damanafshan  <     http://www.damanafshan.ir
 %%%   __________________________________
 %%%
+%%%  Last Modified Mehr 24th, 1396.
+%%%  ----  AutoFakeBold option was put in a wrong place.
+%%%  Last Modified Mehr 19th, 1396.
+%%%  ----  Dr. Khalighi has made major revision to consitently cope the class with current options of xepersian.
 %%%  Last Modified Tir 28th, 1396.
 %%%  ----  \selectfont is replaced where it was necessary.
 %%%  ----  Necessary changes was done to incorporate Yas font in everywhere a number exists.
@@ -168,7 +172,7 @@
 \setdigitfont[Scale=1.1]{Yas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
-\defpersianfont\nastaliq[Language=Default,Scale=2.5]{IranNastaliq}[AutoFakeBold]
+\defpersianfont\nastaliq[Language=Default,Scale=2.5,AutoFakeBold]{IranNastaliq}
 \defpersianfont\chapternumber[Language=Default,Scale=1.5,BoldFont={IRlotus}]{IRLotus}
 }
 \graphicspath{ {Images/} }
